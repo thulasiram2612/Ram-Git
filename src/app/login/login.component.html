@@ -1,0 +1,29 @@
+<div class="container"  >
+<div class="bod" *ngIf="login">
+    <div style="padding: 30px;">
+    <div>User name:<input [(ngModel)]="username" type="text" class="form-control"></div>
+    <div>password:<input [(ngModel)]="password" type="password" class="form-control"></div>
+    <div style="padding-top:20px; padding-left:10px;">
+    <button type="button" class="btn" routerLink="{{ishost}}" (click)="onLogin(username,password)">Login</button>
+    <span ><a class="reg" routerLink="/login" (click)="goRegister()">Create user account</a></span></div>
+</div>
+  </div>
+
+  <div *ngIf="register">
+      <div class="row" style="padding-top: 15%;">
+      <div class="col-sm-2"></div>
+    <div class="col-sm-8 img-thumbnail" style="padding:30px;background-color:#01ffd9">
+<div>
+    <div>Register No:<input [(ngModel)]="loguser.user.registerNo" type="number" class="form-control"></div>
+    <div>Firstname:<input [(ngModel)]="loguser.user.firstName" type="text" class="form-control"></div>
+    <div>Lastname:<input [(ngModel)]="loguser.user.lastName" type="text" class="form-control"></div>
+    <div>Date of Birth:<input [(ngModel)]="loguser.user.dateOfBirth" type="date" class="form-control"></div>
+    <div>Password:<input [(ngModel)]="loguser.user.password" type="password" class="form-control"></div>
+    <div style="padding-top:20px"><button type="button" class="btn" (click)="onSubmit(loguser.user)">Submit</button></div>
+</div>
+</div>
+<div class="col-sm-2"></div>
+</div>
+</div>
+</div>
+
